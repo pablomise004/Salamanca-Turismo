@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Museos de Salamanca</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+  <body data-page="museos" class="min-h-screen flex flex-col bg-white">
+    <header class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <span class="text-amber-600">🏛️</span>
+          </div>
+          <div>
+            <h1>Descubre Salamanca</h1>
+            <p class="text-amber-100">Ciudad Dorada de España</p>
+          </div>
+        </a>
+        <nav class="desktop-nav gap-6 hidden md:flex" id="desktop-nav">
+          <a data-nav href="index.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Inicio</a>
+          <a data-nav href="blog.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Blog</a>
+          <a data-nav href="restaurantes.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Restaurantes</a>
+          <a data-nav href="museos.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Museos</a>
+          <a data-nav href="curiosidades.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Curiosidades</a>
+          <a data-nav href="contacto.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Contacto</a>
+          <a data-nav href="login.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Iniciar Sesión</a>
+        </nav>
+        <button class="mobile-toggle md:hidden p-2 hover:bg-amber-700 rounded transition-colors" id="mobile-toggle" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu md:hidden mt-4 pb-4 flex-col gap-3 hidden" id="mobile-menu">
+        <a data-nav href="index.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Inicio</a>
+        <a data-nav href="blog.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Blog</a>
+        <a data-nav href="restaurantes.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Restaurantes</a>
+        <a data-nav href="museos.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Museos</a>
+        <a data-nav href="curiosidades.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Curiosidades</a>
+        <a data-nav href="contacto.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Contacto</a>
+        <a data-nav href="login.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Iniciar Sesión</a>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <div class="bg-amber-600 text-white py-16">
+        <div class="container mx-auto px-4">
+          <h1 class="mb-4">Museos de Salamanca</h1>
+          <p class="max-w-2xl">
+            Sumérgete en el arte, la historia y la cultura de Salamanca a través de sus fascinantes museos y centros culturales
+          </p>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4">
+        <nav aria-label="Breadcrumb" class="py-4">
+          <ol class="flex items-center gap-2 flex-wrap">
+            <li>
+              <a href="index.html" class="flex items-center gap-1 text-stone-600 hover:text-amber-600 transition-colors">
+                <i data-lucide="home" class="w-4 h-4"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="text-stone-400 w-4 h-4"></i>
+              <span class="text-stone-800">Museos</span>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8" id="museos-grid"></div>
+
+        <section class="bg-gradient-to-r from-amber-50 to-stone-50 rounded-lg p-8 my-8">
+          <h2 class="text-amber-600 mb-6">Cultura y Patrimonio</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <p class="mb-4">
+                Los <strong>museos de Salamanca</strong> ofrecen un viaje único a través del tiempo y el arte. Desde la <em>prehistoria</em> hasta el arte contemporáneo, cada museo cuenta una historia diferente que contribuye a entender la riqueza cultural de la ciudad. La <u>Casa Lis</u>, con sus impresionantes vidrieras modernistas, es una visita imprescindible para los amantes del Art Nouveau.
+              </p>
+              <p>
+                La oferta museística de Salamanca es diversa y accesible, con muchas opciones gratuitas o a precios reducidos. Te recomendamos planificar tu visita con antelación y aprovechar los días de entrada gratuita que ofrecen algunos centros.
+              </p>
+            </div>
+            <div>
+              <h3 class="mb-3">Consejos para tu visita</h3>
+              <ul class="space-y-2 text-stone-600">
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-600 mt-1">•</span>
+                  <span>Muchos museos cierran los lunes, planifica en consecuencia</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-600 mt-1">•</span>
+                  <span>Compra las entradas online cuando sea posible para evitar colas</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-600 mt-1">•</span>
+                  <span>Algunos museos ofrecen visitas guiadas gratuitas en horarios específicos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-600 mt-1">•</span>
+                  <span>Pregunta por descuentos para estudiantes, jubilados y familias numerosas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-200 mt-16">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-amber-400 mb-4">Contacto</h3>
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>Plaza Mayor, Salamanca, España</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>+34 923 123 456</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>info@descubresalamanca.es</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Enlaces Rápidos</h3>
+            <div class="flex flex-col gap-2">
+              <a href="index.html" class="hover:text-amber-400 transition-colors">Inicio</a>
+              <a href="blog.html" class="hover:text-amber-400 transition-colors">Blog</a>
+              <a href="restaurantes.html" class="hover:text-amber-400 transition-colors">Restaurantes</a>
+              <a href="museos.html" class="hover:text-amber-400 transition-colors">Museos</a>
+              <a href="contacto.html" class="hover:text-amber-400 transition-colors">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Síguenos</h3>
+            <div class="flex gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Facebook">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Twitter">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <p class="mt-4">
+              Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-stone-700 mt-8 pt-6 text-center">
+          <p>© 2025 Descubre Salamanca. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-[100]"></div>
+
+    <script>
+      const museos = [
+        {
+          id: 1,
+          nombre: 'Casa Lis - Museo de Art Nouveau y Art Déco',
+          descripcion:
+            'Impresionante museo ubicado en un edificio modernista con espectaculares vidrieras. Alberga una excepcional colección de artes decorativas de finales del siglo XIX y principios del XX.',
+          direccion: 'Calle Gibraltar, 14',
+          horario:
+            'Martes a Viernes: 11:00 - 14:00, 16:00 - 19:00 / Sábados y Domingos: 11:00 - 20:00',
+          precio: 'General: 5€ / Reducida: 3€',
+          destacado: 'Colección de vidrieras y muñecas antiguas',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 2,
+          nombre: 'Museo de Salamanca (Museo de Bellas Artes)',
+          descripcion:
+            'Museo provincial que exhibe arte desde la prehistoria hasta el siglo XX. Destacan las obras de pintores salmantinos y la colección de arte religioso.',
+          direccion: 'Patio de Escuelas, 2',
+          horario:
+            'Martes a Sábado: 10:00 - 14:00, 16:00 - 19:00 / Domingos: 10:00 - 14:00',
+          precio: 'Entrada gratuita',
+          destacado: 'Pinturas del siglo XV al XX',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 3,
+          nombre: 'Museo de Historia de la Automoción',
+          descripcion:
+            'Fascinante colección de vehículos históricos que recorre la evolución del automóvil desde finales del siglo XIX hasta nuestros días.',
+          direccion: 'Plaza del Mercado Viejo',
+          horario: 'Martes a Domingo: 10:00 - 14:00, 17:00 - 20:00',
+          precio: 'General: 4€ / Reducida: 2€',
+          destacado: 'Más de 200 vehículos históricos',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 4,
+          nombre: 'Museo de la Universidad de Salamanca',
+          descripcion:
+            'Museo universitario que conserva el legado histórico de una de las universidades más antiguas del mundo. Incluye el famoso Cielo de Salamanca.',
+          direccion: 'Patio de Escuelas Mayores',
+          horario: 'Lunes a Sábado: 10:00 - 14:00, 16:00 - 19:00',
+          precio: 'General: 10€ (entrada combinada con visita)',
+          destacado: 'El Cielo de Salamanca y la biblioteca histórica',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 5,
+          nombre: 'DA2 - Domus Artium 2002',
+          descripcion:
+            'Centro de arte contemporáneo ubicado en la antigua cárcel provincial. Exhibe arte actual con exposiciones temporales de artistas nacionales e internacionales.',
+          direccion: 'Avenida de la Aldehuela, s/n',
+          horario:
+            'Martes a Viernes: 11:00 - 14:00, 17:00 - 21:00 / Sábados y Domingos: 11:00 - 21:00',
+          precio: 'General: 3€ / Entrada gratuita los martes',
+          destacado: 'Arte contemporáneo y exposiciones temporales',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 6,
+          nombre: 'Museo Catedralicio',
+          descripcion:
+            'Situado en la Catedral Nueva, este museo exhibe una valiosa colección de arte sacro, orfebrería y documentos históricos de la diócesis.',
+          direccion: 'Plaza Juan XXIII',
+          horario: 'Lunes a Domingo: 10:00 - 18:00',
+          precio: 'General: 6€ (incluye acceso a las catedrales)',
+          destacado: 'Arte sacro y orfebrería',
+          imagen:
+            'https://images.unsplash.com/photo-1643820509303-79e98ac7e006?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+      ];
+
+      const grid = document.getElementById('museos-grid');
+      if (grid) {
+        museos.forEach((m) => {
+          const art = document.createElement('article');
+          art.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow flex flex-col';
+          art.innerHTML = `
+            <div class='aspect-video overflow-hidden'>
+              <img src='${m.imagen}' alt='${m.nombre}' class='w-full h-full object-cover hover:scale-105 transition-transform duration-300'/>
+            </div>
+            <div class='p-6 flex flex-col flex-grow'>
+              <h3 class='mb-3'>${m.nombre}</h3>
+              <p class='text-stone-600 mb-4 flex-grow'>${m.descripcion}</p>
+              <div class='space-y-3 mb-4'>
+                <div class='flex items-start gap-2 text-stone-600'>
+                  <i data-lucide='map-pin' class='w-4 h-4 mt-0.5'></i>
+                  <span>${m.direccion}</span>
+                </div>
+                <div class='flex items-start gap-2 text-stone-600'>
+                  <i data-lucide='clock' class='w-4 h-4 mt-0.5'></i>
+                  <span>${m.horario}</span>
+                </div>
+                <div class='flex items-start gap-2 text-stone-600'>
+                  <i data-lucide='euro' class='w-4 h-4 mt-0.5'></i>
+                  <span>${m.precio}</span>
+                </div>
+              </div>
+              <div class='bg-amber-50 p-3 rounded-lg mb-4'>
+                <p class='text-amber-700'><strong>Destacado:</strong> ${m.destacado}</p>
+              </div>
+              <button class='flex items-center justify-center gap-2 w-full bg-amber-600 text-white py-2 rounded-lg hover:bg-amber-700 transition-colors'>
+                <span>Más información</span>
+                <i data-lucide='external-link' class='w-4 h-4'></i>
+              </button>
+            </div>`;
+          grid.appendChild(art);
+        });
+        if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+      }
+    </script>
+  </body>
+  </html>

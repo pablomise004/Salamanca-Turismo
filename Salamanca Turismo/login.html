@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iniciar Sesión - Descubre Salamanca</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+  <body data-page="login" class="min-h-screen flex flex-col bg-stone-50">
+    <header class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <span class="text-amber-600">🏛️</span>
+          </div>
+          <div>
+            <h1>Descubre Salamanca</h1>
+            <p class="text-amber-100">Ciudad Dorada de España</p>
+          </div>
+        </a>
+        <nav class="desktop-nav gap-6 hidden md:flex" id="desktop-nav">
+          <a data-nav href="index.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Inicio</a>
+          <a data-nav href="blog.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Blog</a>
+          <a data-nav href="restaurantes.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Restaurantes</a>
+          <a data-nav href="museos.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Museos</a>
+          <a data-nav href="curiosidades.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Curiosidades</a>
+          <a data-nav href="contacto.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Contacto</a>
+          <a data-nav href="login.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Iniciar Sesión</a>
+        </nav>
+        <button class="mobile-toggle md:hidden p-2 hover:bg-amber-700 rounded transition-colors" id="mobile-toggle" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu md:hidden mt-4 pb-4 flex-col gap-3 hidden" id="mobile-menu">
+        <a data-nav href="index.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Inicio</a>
+        <a data-nav href="blog.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Blog</a>
+        <a data-nav href="restaurantes.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Restaurantes</a>
+        <a data-nav href="museos.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Museos</a>
+        <a data-nav href="curiosidades.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Curiosidades</a>
+        <a data-nav href="contacto.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Contacto</a>
+        <a data-nav href="login.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Iniciar Sesión</a>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <div class="container mx-auto px-4">
+        <nav aria-label="Breadcrumb" class="py-4">
+          <ol class="flex items-center gap-2 flex-wrap">
+            <li>
+              <a href="index.html" class="flex items-center gap-1 text-stone-600 hover:text-amber-600 transition-colors">
+                <i data-lucide="home" class="w-4 h-4"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="text-stone-400 w-4 h-4"></i>
+              <span class="text-stone-800">Iniciar Sesión</span>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="max-w-md mx-auto py-8">
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-8">
+              <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="lock" class="text-amber-600 w-8 h-8"></i>
+              </div>
+              <h1 class="mb-2">Iniciar Sesión</h1>
+              <p class="text-stone-600">Accede a tu cuenta para disfrutar de contenido exclusivo</p>
+            </div>
+
+            <form id="login-form" class="space-y-6" novalidate>
+              <div>
+                <label for="email" class="block mb-2">
+                  Email <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <i data-lucide="mail" class="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 w-5 h-5"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full pl-10 pr-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    placeholder="tu@email.com"
+                    required
+                  />
+                </div>
+                <p id="email-error" class="text-red-500 mt-1"></p>
+              </div>
+
+              <div>
+                <label for="password" class="block mb-2">
+                  Contraseña <span class="text-red-500">*</span>
+                </label>
+                <div class="relative">
+                  <i data-lucide="lock" class="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 w-5 h-5"></i>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="w-full pl-10 pr-12 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600"
+                    placeholder="••••••••"
+                    minlength="6"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="togglePassword"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600"
+                    aria-label="Mostrar contraseña"
+                  >
+                    <i data-lucide="eye" class="w-5 h-5"></i>
+                  </button>
+                </div>
+                <p id="password-error" class="text-red-500 mt-1"></p>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    id="rememberMe"
+                    name="rememberMe"
+                    class="w-4 h-4 text-amber-600 border-stone-300 rounded focus:ring-amber-600"
+                  />
+                  <span class="text-stone-700">Recordarme</span>
+                </label>
+                <a href="#" class="text-amber-600 hover:text-amber-700 transition-colors">¿Olvidaste tu contraseña?</a>
+              </div>
+
+              <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition-colors">
+                Iniciar Sesión
+              </button>
+              <p class="text-center text-stone-600">
+                ¿No tienes cuenta?
+                <a href="registro.html" class="text-amber-600 hover:text-amber-700 transition-colors">Regístrate aquí</a>
+              </p>
+            </form>
+
+            <div class="relative my-6">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-stone-300"></div>
+              </div>
+              <div class="relative flex justify-center">
+                <span class="px-4 bg-white text-stone-500">o continúa con</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <button class="flex items-center justify-center gap-2 border border-stone-300 py-2 rounded-lg hover:bg-stone-50 transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+                <span>Google</span>
+              </button>
+              <button class="flex items-center justify-center gap-2 border border-stone-300 py-2 rounded-lg hover:bg-stone-50 transition-colors">
+                <svg class="w-5 h-5" fill="#1877F2" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                <span>Facebook</span>
+              </button>
+            </div>
+
+            <div class="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4">
+              <p class="text-stone-700">
+                <strong>Nota:</strong> Al iniciar sesión, podrás guardar tus lugares favoritos, recibir notificaciones sobre eventos y acceder a contenido exclusivo sobre Salamanca.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-200 mt-16">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-amber-400 mb-4">Contacto</h3>
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>Plaza Mayor, Salamanca, España</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>+34 923 123 456</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>info@descubresalamanca.es</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Enlaces Rápidos</h3>
+            <div class="flex flex-col gap-2">
+              <a href="index.html" class="hover:text-amber-400 transition-colors">Inicio</a>
+              <a href="blog.html" class="hover:text-amber-400 transition-colors">Blog</a>
+              <a href="restaurantes.html" class="hover:text-amber-400 transition-colors">Restaurantes</a>
+              <a href="museos.html" class="hover:text-amber-400 transition-colors">Museos</a>
+              <a href="contacto.html" class="hover:text-amber-400 transition-colors">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Síguenos</h3>
+            <div class="flex gap-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener"
+                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
+                aria-label="Facebook"
+              >
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener"
+                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener"
+                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
+                aria-label="Twitter"
+              >
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <p class="mt-4">
+              Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-stone-700 mt-8 pt-6 text-center">
+          <p>© 2025 Descubre Salamanca. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-[100]"></div>
+  </body>
+  </html>

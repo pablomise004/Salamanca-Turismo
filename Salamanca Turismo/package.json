@@ -1,0 +1,14 @@
+
+{
+    "name": "descubre-salamanca-static",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Versión estática (HTML/CSS/JS) sin React ni TypeScript del sitio Descubre Salamanca.",
+    "license": "MIT",
+    "scripts": {
+        "serve": "npx http-server -c-1 -p 3000"  
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurantes de Salamanca</title>
+    <link rel="stylesheet" href="./src/index.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="./assets/js/main.js"></script>
+  </head>
+  <body data-page="restaurantes" class="min-h-screen flex flex-col bg-white">
+    <header class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <span class="text-amber-600">🏛️</span>
+          </div>
+          <div>
+            <h1>Descubre Salamanca</h1>
+            <p class="text-amber-100">Ciudad Dorada de España</p>
+          </div>
+        </a>
+        <nav class="desktop-nav gap-6 hidden md:flex" id="desktop-nav">
+          <a data-nav href="index.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Inicio</a>
+          <a data-nav href="blog.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Blog</a>
+          <a data-nav href="restaurantes.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Restaurantes</a>
+          <a data-nav href="museos.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Museos</a>
+          <a data-nav href="curiosidades.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Curiosidades</a>
+          <a data-nav href="contacto.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Contacto</a>
+          <a data-nav href="login.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Iniciar Sesión</a>
+        </nav>
+        <button class="mobile-toggle md:hidden p-2 hover:bg-amber-700 rounded transition-colors" id="mobile-toggle" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu md:hidden mt-4 pb-4 flex-col gap-3 hidden" id="mobile-menu">
+        <a data-nav href="index.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Inicio</a>
+        <a data-nav href="blog.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Blog</a>
+        <a data-nav href="restaurantes.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Restaurantes</a>
+        <a data-nav href="museos.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Museos</a>
+        <a data-nav href="curiosidades.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Curiosidades</a>
+        <a data-nav href="contacto.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Contacto</a>
+        <a data-nav href="login.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Iniciar Sesión</a>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <div class="bg-amber-600 text-white py-16">
+        <div class="container mx-auto px-4">
+          <h1 class="mb-4">Restaurantes de Salamanca</h1>
+          <p class="max-w-2xl">
+            Descubre los mejores restaurantes de la ciudad donde disfrutar de la auténtica gastronomía salmantina y castellana
+          </p>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4">
+        <nav aria-label="Breadcrumb" class="py-4">
+          <ol class="flex items-center gap-2 flex-wrap">
+            <li>
+              <a href="index.html" class="flex items-center gap-1 text-stone-600 hover:text-amber-600 transition-colors">
+                <i data-lucide="home" class="w-4 h-4"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="chevron-right" class="text-stone-400 w-4 h-4"></i>
+              <span class="text-stone-800">Restaurantes</span>
+            </li>
+          </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 py-8" id="rest-grid"></div>
+
+        <section class="bg-amber-50 rounded-lg p-8 my-8">
+          <h2 class="text-amber-600 mb-4">Gastronomía Salmantina</h2>
+          <p class="mb-4">
+            La <strong>gastronomía de Salamanca</strong> es un reflejo de su tierra, con productos de la <em>máxima calidad</em> que han ganado reconocimiento internacional. Los <u>embutidos ibéricos</u>, especialmente el jamón de Guijuelo, son una de las joyas de la provincia. No puedes irte sin probar el hornazo, el farinato o el chanfaina, platos tradicionales que han pasado de generación en generación.
+          </p>
+          <p>
+            Los restaurantes de Salamanca combinan tradición e innovación, ofreciendo desde tapas clásicas hasta propuestas de alta cocina. La Plaza Mayor es el epicentro de la vida gastronómica, aunque por toda la ciudad encontrarás rincones donde disfrutar de una buena mesa acompañada de excelentes vinos de la tierra.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-200 mt-16">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-amber-400 mb-4">Contacto</h3>
+            <div class="flex flex-col gap-3">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>Plaza Mayor, Salamanca, España</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>+34 923 123 456</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>info@descubresalamanca.es</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Enlaces Rápidos</h3>
+            <div class="flex flex-col gap-2">
+              <a href="index.html" class="hover:text-amber-400 transition-colors">Inicio</a>
+              <a href="blog.html" class="hover:text-amber-400 transition-colors">Blog</a>
+              <a href="restaurantes.html" class="hover:text-amber-400 transition-colors">Restaurantes</a>
+              <a href="museos.html" class="hover:text-amber-400 transition-colors">Museos</a>
+              <a href="contacto.html" class="hover:text-amber-400 transition-colors">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-amber-400 mb-4">Síguenos</h3>
+            <div class="flex gap-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Facebook">
+                <i data-lucide="facebook" class="w-5 h-5"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Instagram">
+                <i data-lucide="instagram" class="w-5 h-5"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Twitter">
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+            <p class="mt-4">
+              Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.
+            </p>
+          </div>
+        </div>
+        <div class="border-t border-stone-700 mt-8 pt-6 text-center">
+          <p>© 2025 Descubre Salamanca. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast-container" class="fixed top-4 right-4 z-[100]"></div>
+
+    <script>
+      const restaurantes = [
+        {
+          id: 1,
+          nombre: 'El Mesón Cervantes',
+          descripcion:
+            'Restaurante tradicional especializado en cocina castellana. Famoso por sus carnes a la brasa y su ambiente acogedor.',
+          especialidad: 'Cocina Castellana',
+          direccion: 'Plaza Mayor, 15',
+          telefono: '+34 923 217 213',
+          horario: 'L-D: 13:00 - 16:00, 20:00 - 23:30',
+          precio: '€€€',
+          rating: 4.5,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 2,
+          nombre: 'La Cocina de Toño',
+          descripcion:
+            'Gastronomía moderna con productos locales. Destacan sus platos innovadores que respetan la tradición salmantina.',
+          especialidad: 'Cocina de Autor',
+          direccion: 'Calle Gran Vía, 20',
+          telefono: '+34 923 269 374',
+          horario: 'M-S: 13:30 - 15:30, 21:00 - 23:00',
+          precio: '€€€€',
+          rating: 4.8,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 3,
+          nombre: 'Tapas Don Fadrique',
+          descripcion:
+            'Bar de tapas en el centro histórico. Perfecto para disfrutar de pinchos y raciones en un ambiente animado.',
+          especialidad: 'Tapas y Pinchos',
+          direccion: 'Calle Compañía, 8',
+          telefono: '+34 923 121 887',
+          horario: 'L-D: 12:00 - 16:00, 19:00 - 00:00',
+          precio: '€€',
+          rating: 4.3,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 4,
+          nombre: 'Restaurante Víctor Gutiérrez',
+          descripcion:
+            'Estrella Michelin. Alta cocina con vistas a la Catedral. Una experiencia gastronómica única e inolvidable.',
+          especialidad: 'Alta Cocina',
+          direccion: 'Calle San Pablo, 80',
+          telefono: '+34 923 262 973',
+          horario: 'M-S: 14:00 - 15:30, 21:00 - 22:30',
+          precio: '€€€€€',
+          rating: 5.0,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 5,
+          nombre: 'Casa Paca',
+          descripcion:
+            'Restaurante familiar con más de 50 años de historia. Especializado en arroces y pescados frescos.',
+          especialidad: 'Arroces y Pescados',
+          direccion: 'Plaza del Peso, 10',
+          telefono: '+34 923 218 993',
+          horario: 'L-D: 13:00 - 16:30, 20:00 - 23:30',
+          precio: '€€€',
+          rating: 4.6,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+        {
+          id: 6,
+          nombre: 'La Hoja 21',
+          descripcion:
+            'Cocina mediterránea con toques creativos. Ambiente moderno y carta de vinos selecta.',
+          especialidad: 'Cocina Mediterránea',
+          direccion: 'Calle San Justo, 21',
+          telefono: '+34 923 264 028',
+          horario: 'M-D: 13:00 - 16:00, 20:30 - 23:30',
+          precio: '€€€',
+          rating: 4.4,
+          imagen:
+            'https://images.unsplash.com/photo-1625418277638-6db2d521a78c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+        },
+      ];
+
+      const grid = document.getElementById('rest-grid');
+      if (grid) {
+        restaurantes.forEach((r) => {
+          const art = document.createElement('article');
+          art.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow';
+          art.innerHTML = `
+            <div class='md:flex'>
+              <div class='md:w-1/3'>
+                <img src='${r.imagen}' alt='${r.nombre}' class='w-full h-full object-cover min-h-[250px]'/>
+              </div>
+              <div class='md:w-2/3 p-6'>
+                <div class='flex items-start justify-between mb-3'>
+                  <div>
+                    <h3 class='mb-1'>${r.nombre}</h3>
+                    <span class='text-amber-600'>${r.especialidad}</span>
+                  </div>
+                  <div class='flex items-center gap-1 bg-amber-100 px-3 py-1 rounded-full'>
+                    <i data-lucide='star' class='w-4 h-4 text-amber-600'></i>
+                    <span class='text-amber-700'>${r.rating}</span>
+                  </div>
+                </div>
+                <p class='text-stone-600 mb-4'>${r.descripcion}</p>
+                <div class='space-y-2'>
+                  <div class='flex items-start gap-2 text-stone-600'>
+                    <i data-lucide='map-pin' class='w-4 h-4 mt-0.5'></i>
+                    <span>${r.direccion}</span>
+                  </div>
+                  <div class='flex items-center gap-2 text-stone-600'>
+                    <i data-lucide='phone' class='w-4 h-4'></i>
+                    <a href='tel:${r.telefono}' class='hover:text-amber-600 transition-colors'>${r.telefono}</a>
+                  </div>
+                  <div class='flex items-start gap-2 text-stone-600'>
+                    <i data-lucide='clock' class='w-4 h-4 mt-0.5'></i>
+                    <span>${r.horario}</span>
+                  </div>
+                </div>
+                <div class='flex items-center justify-between mt-4 pt-4 border-t'>
+                  <span class='text-stone-700'>Precio: ${r.precio}</span>
+                  <button class='flex items-center gap-2 text-amber-600 hover:gap-3 transition-all'>
+                    <span>Ver más</span>
+                    <i data-lucide='external-link' class='w-4 h-4'></i>
+                  </button>
+                </div>
+              </div>
+            </div>`;
+          grid.appendChild(art);
+        });
+        if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+      }
+    </script>
+  </body>
+  </html>
