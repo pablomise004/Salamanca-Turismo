@@ -4,158 +4,142 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Contacto - Descubre Salamanca</title>
-    <link rel="stylesheet" href="./src/index.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer src="./assets/js/main.js"></script>
   </head>
-  <body data-page="contacto" class="min-h-screen flex flex-col bg-stone-50">
-    <header class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span class="text-amber-600">🏛️</span>
-          </div>
-          <div>
-            <h1>Descubre Salamanca</h1>
-            <p class="text-amber-100">Ciudad Dorada de España</p>
-          </div>
-        </a>
-        <nav class="desktop-nav gap-6 hidden md:flex" id="desktop-nav">
-          <a data-nav href="index.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Inicio</a>
-          <a data-nav href="blog.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Blog</a>
-          <a data-nav href="restaurantes.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Restaurantes</a>
-          <a data-nav href="museos.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Museos</a>
-          <a data-nav href="curiosidades.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Curiosidades</a>
-          <a data-nav href="contacto.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Contacto</a>
-          <a data-nav href="login.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Iniciar Sesión</a>
+  <body data-page="contacto">
+    <header class="site-header">
+      <div class="container">
+        <div class="bar">
+          <a href="index.html" class="brand">
+            <div class="logo">🏛️</div>
+            <div>
+              <h1>Descubre Salamanca</h1>
+              <p>Ciudad Dorada de España</p>
+            </div>
+          </a>
+          <nav class="desktop-nav" id="desktop-nav">
+            <a data-nav href="index.html" class="border-b-2 border-transparent">Inicio</a>
+            <a data-nav href="blog.html" class="border-b-2 border-transparent">Blog</a>
+            <a data-nav href="restaurantes.html" class="border-b-2 border-transparent">Restaurantes</a>
+            <a data-nav href="museos.html" class="border-b-2 border-transparent">Museos</a>
+            <a data-nav href="curiosidades.html" class="border-b-2 border-transparent">Curiosidades</a>
+            <a data-nav href="contacto.html" class="border-b-2 border-transparent">Contacto</a>
+            <a data-nav href="login.html" class="border-b-2 border-transparent">Iniciar Sesión</a>
+          </nav>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu hidden" id="mobile-menu">
+          <a data-nav href="index.html">Inicio</a>
+          <a data-nav href="blog.html">Blog</a>
+          <a data-nav href="restaurantes.html">Restaurantes</a>
+          <a data-nav href="museos.html">Museos</a>
+          <a data-nav href="curiosidades.html">Curiosidades</a>
+          <a data-nav href="contacto.html">Contacto</a>
+          <a data-nav href="login.html">Iniciar Sesión</a>
         </nav>
-        <button class="mobile-toggle md:hidden p-2 hover:bg-amber-700 rounded transition-colors" id="mobile-toggle" aria-label="Abrir menú">
-          <i data-lucide="menu"></i>
-        </button>
       </div>
-      <nav class="mobile-menu md:hidden mt-4 pb-4 flex-col gap-3 hidden" id="mobile-menu">
-        <a data-nav href="index.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Inicio</a>
-        <a data-nav href="blog.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Blog</a>
-        <a data-nav href="restaurantes.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Restaurantes</a>
-        <a data-nav href="museos.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Museos</a>
-        <a data-nav href="curiosidades.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Curiosidades</a>
-        <a data-nav href="contacto.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Contacto</a>
-        <a data-nav href="login.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Iniciar Sesión</a>
-      </nav>
     </header>
 
-    <main class="flex-grow">
-      <div class="bg-amber-600 text-white py-16">
-        <div class="container mx-auto px-4">
-          <h1 class="mb-4">Contacto</h1>
-          <p class="max-w-2xl">¿Tienes alguna pregunta o necesitas más información? Estamos aquí para ayudarte</p>
+    <main>
+      <div class="hero-band">
+        <div class="container">
+          <h1>Contacto</h1>
+          <p style="max-width:680px;">¿Tienes alguna pregunta o necesitas más información? Estamos aquí para ayudarte</p>
         </div>
       </div>
 
-      <div class="container mx-auto px-4">
-        <nav aria-label="Breadcrumb" class="py-4">
-          <ol class="flex items-center gap-2 flex-wrap">
-            <li>
-              <a href="index.html" class="flex items-center gap-1 text-stone-600 hover:text-amber-600 transition-colors">
-                <i data-lucide="home" class="w-4 h-4"></i>
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="chevron-right" class="text-stone-400 w-4 h-4"></i>
-              <span class="text-stone-800">Contacto</span>
-            </li>
-          </ol>
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html"><i data-lucide="home"></i> <span>Inicio</span></a>
+          <span style="margin: 0 .5rem; color: var(--stone-400);">›</span>
+          <span>Contacto</span>
         </nav>
 
-        <div class="grid lg:grid-cols-3 gap-8 py-8">
-          <div class="lg:col-span-1 space-y-6">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <h2 class="mb-6">Información de Contacto</h2>
-              <div class="space-y-4">
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                    <i data-lucide="map-pin" class="text-amber-600 w-5 h-5"></i>
+        <div class="section" style="padding-top:1rem; padding-bottom:0;">
+          <div style="display:grid; gap:2rem; grid-template-columns: 1fr;">
+            <div>
+              <div class="form-card" style="margin-bottom:1rem;">
+                <h2 style="margin-bottom:1rem;">Información de Contacto</h2>
+                <div style="display:flex; flex-direction:column; gap:1rem;">
+                  <div style="display:flex; gap:.75rem; align-items:flex-start;">
+                    <div class="rounded-full" style="width:40px;height:40px; background:var(--amber-100); display:grid; place-items:center; color:var(--amber-600);"><i data-lucide="map-pin"></i></div>
+                    <div>
+                      <h3 style="margin-bottom:.25rem;">Dirección</h3>
+                      <p class="muted">Plaza Mayor, 1<br/>37002 Salamanca, España</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="mb-1">Dirección</h3>
-                    <p class="text-stone-600">Plaza Mayor, 1<br />37002 Salamanca, España</p>
+                  <div style="display:flex; gap:.75rem; align-items:flex-start;">
+                    <div class="rounded-full" style="width:40px;height:40px; background:var(--amber-100); display:grid; place-items:center; color:var(--amber-600);"><i data-lucide="phone"></i></div>
+                    <div>
+                      <h3 style="margin-bottom:.25rem;">Teléfono</h3>
+                      <a href="tel:+34923123456" class="muted" style="text-decoration:none;">+34 923 123 456</a>
+                    </div>
                   </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                    <i data-lucide="phone" class="text-amber-600 w-5 h-5"></i>
+                  <div style="display:flex; gap:.75rem; align-items:flex-start;">
+                    <div class="rounded-full" style="width:40px;height:40px; background:var(--amber-100); display:grid; place-items:center; color:var(--amber-600);"><i data-lucide="mail"></i></div>
+                    <div>
+                      <h3 style="margin-bottom:.25rem;">Email</h3>
+                      <a href="mailto:info@descubresalamanca.es" class="muted" style="text-decoration:none; word-break:break-all;">info@descubresalamanca.es</a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="mb-1">Teléfono</h3>
-                    <a href="tel:+34923123456" class="text-stone-600 hover:text-amber-600 transition-colors">+34 923 123 456</a>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                    <i data-lucide="mail" class="text-amber-600 w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <h3 class="mb-1">Email</h3>
-                    <a href="mailto:info@descubresalamanca.es" class="text-stone-600 hover:text-amber-600 transition-colors break-all">info@descubresalamanca.es</a>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
-                    <i data-lucide="clock" class="text-amber-600 w-5 h-5"></i>
-                  </div>
-                  <div>
-                    <h3 class="mb-1">Horario</h3>
-                    <p class="text-stone-600">Lunes a Viernes: 9:00 - 18:00<br />Sábados: 10:00 - 14:00<br />Domingos: Cerrado</p>
+                  <div style="display:flex; gap:.75rem; align-items:flex-start;">
+                    <div class="rounded-full" style="width:40px;height:40px; background:var(--amber-100); display:grid; place-items:center; color:var(--amber-600);"><i data-lucide="clock"></i></div>
+                    <div>
+                      <h3 style="margin-bottom:.25rem;">Horario</h3>
+                      <p class="muted">Lunes a Viernes: 9:00 - 18:00<br/>Sábados: 10:00 - 14:00<br/>Domingos: Cerrado</p>
+                    </div>
                   </div>
                 </div>
               </div>
+              <div class="rounded-lg" style="background:var(--amber-50); border:1px solid var(--amber-200); padding:1.25rem;">
+                <h3 style="margin-bottom:.5rem;">¿Necesitas ayuda inmediata?</h3>
+                <p class="muted" style="margin-bottom:1rem;">Para consultas urgentes, llámanos directamente o visita nuestra oficina de información turística en la Plaza Mayor.</p>
+                <a href="tel:+34923123456" class="btn btn-submit" style="display:inline-flex; width:auto;">
+                  <i data-lucide="phone"></i>
+                  <span>Llamar ahora</span>
+                </a>
+              </div>
             </div>
-            <div class="bg-amber-50 border border-amber-200 p-6 rounded-lg">
-              <h3 class="mb-3">¿Necesitas ayuda inmediata?</h3>
-              <p class="text-stone-700 mb-4">Para consultas urgentes, llámanos directamente o visita nuestra oficina de información turística en la Plaza Mayor.</p>
-              <a href="tel:+34923123456" class="inline-flex items-center gap-2 bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700 transition-colors">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                <span>Llamar ahora</span>
-              </a>
-            </div>
-          </div>
-          <div class="lg:col-span-2">
-            <div class="bg-white p-8 rounded-lg shadow-md">
-              <h2 class="mb-6">Envíanos un mensaje</h2>
-              <form id="contact-form" class="space-y-6" novalidate>
-                <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <div class="form-card">
+                <h2 style="margin-bottom:1rem;">Envíanos un mensaje</h2>
+                <form id="contact-form" novalidate>
+                  <div class="form-row cols-2">
                   <div>
-                    <label for="nombre" class="block mb-2">Nombre <span class="text-red-500">*</span></label>
-                    <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="Tu nombre" required />
-                    <p id="nombre-error" class="text-red-500 mt-1"></p>
+                    <label for="nombre">Nombre <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required />
+                    <p id="nombre-error" class="form-error"></p>
                   </div>
                   <div>
-                    <label for="apellidos" class="block mb-2">Apellidos <span class="text-red-500">*</span></label>
-                    <input type="text" id="apellidos" name="apellidos" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="Tus apellidos" required />
-                    <p id="apellidos-error" class="text-red-500 mt-1"></p>
+                    <label for="apellidos">Apellidos <span class="required">*</span></label>
+                    <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Tus apellidos" required />
+                    <p id="apellidos-error" class="form-error"></p>
                   </div>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-row cols-2" style="margin-top:1rem;">
                   <div>
-                    <label for="email" class="block mb-2">Email <span class="text-red-500">*</span></label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="tu@email.com" required />
-                    <p id="email-error" class="text-red-500 mt-1"></p>
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com" required />
+                    <p id="email-error" class="form-error"></p>
                   </div>
                   <div>
-                    <label for="telefono" class="block mb-2">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="+34 123 456 789" />
-                    <p id="telefono-error" class="text-red-500 mt-1"></p>
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="+34 123 456 789" />
+                    <p id="telefono-error" class="form-error"></p>
                   </div>
                 </div>
                 <div>
-                  <label for="asunto" class="block mb-2">Asunto <span class="text-red-500">*</span></label>
-                  <input type="text" id="asunto" name="asunto" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" placeholder="Motivo de tu consulta" required />
-                  <p id="asunto-error" class="text-red-500 mt-1"></p>
+                  <label for="asunto">Asunto <span class="required">*</span></label>
+                  <input type="text" id="asunto" name="asunto" class="form-control" placeholder="Motivo de tu consulta" required />
+                  <p id="asunto-error" class="form-error"></p>
                 </div>
                 <div>
-                  <label for="tipoConsulta" class="block mb-2">Tipo de consulta <span class="text-red-500">*</span></label>
-                  <select id="tipoConsulta" name="tipoConsulta" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" required>
+                  <label for="tipoConsulta">Tipo de consulta <span class="required">*</span></label>
+                  <select id="tipoConsulta" name="tipoConsulta" class="form-control" required>
                     <option value="">Selecciona una opción</option>
                     <option value="informacion">Información general</option>
                     <option value="turismo">Turismo y visitas</option>
@@ -164,46 +148,47 @@
                     <option value="eventos">Eventos y cultura</option>
                     <option value="otros">Otros</option>
                   </select>
-                  <p id="tipoConsulta-error" class="text-red-500 mt-1"></p>
+                  <p id="tipoConsulta-error" class="form-error"></p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-row cols-2">
                   <div>
-                    <label for="fechaVisita" class="block mb-2">Fecha de visita prevista</label>
-                    <input type="date" id="fechaVisita" name="fechaVisita" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" />
+                    <label for="fechaVisita">Fecha de visita prevista</label>
+                    <input type="date" id="fechaVisita" name="fechaVisita" class="form-control" />
                   </div>
                   <div>
-                    <label for="numeroPersonas" class="block mb-2">Número de personas</label>
-                    <input type="number" id="numeroPersonas" name="numeroPersonas" value="1" min="1" max="100" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600" />
+                    <label for="numeroPersonas">Número de personas</label>
+                    <input type="number" id="numeroPersonas" name="numeroPersonas" value="1" min="1" max="100" class="form-control" />
                   </div>
                 </div>
                 <div>
-                  <label for="mensaje" class="block mb-2">Mensaje <span class="text-red-500">*</span></label>
-                  <textarea id="mensaje" name="mensaje" rows="6" class="w-full px-4 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 resize-vertical" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                  <p id="mensaje-error" class="text-red-500 mt-1"></p>
+                  <label for="mensaje">Mensaje <span class="required">*</span></label>
+                  <textarea id="mensaje" name="mensaje" rows="6" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                  <p id="mensaje-error" class="form-error"></p>
                 </div>
-                <div class="flex items-start gap-2">
-                  <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 w-4 h-4 text-amber-600 border-stone-300 rounded focus:ring-amber-600" />
-                  <label for="newsletter" class="text-stone-700 cursor-pointer">Deseo recibir información sobre eventos y novedades de Salamanca</label>
+                <div style="display:flex; align-items:flex-start; gap:.5rem;">
+                  <input type="checkbox" id="newsletter" name="newsletter" class="checkbox" />
+                  <label for="newsletter" class="muted" style="cursor:pointer;">Deseo recibir información sobre eventos y novedades de Salamanca</label>
                 </div>
                 <div>
-                  <div class="flex items-start gap-2">
-                    <input type="checkbox" id="privacidad" name="privacidad" class="mt-1 w-4 h-4 text-amber-600 border-stone-300 rounded focus:ring-amber-600" required />
-                    <label for="privacidad" class="text-stone-700 cursor-pointer">He leído y acepto la <a href="#" class="text-amber-600 hover:text-amber-700">política de privacidad</a> <span class="text-red-500">*</span></label>
+                  <div style="display:flex; align-items:flex-start; gap:.5rem;">
+                    <input type="checkbox" id="privacidad" name="privacidad" class="checkbox" required />
+                    <label for="privacidad" class="muted" style="cursor:pointer;">He leído y acepto la <a href="#" style="color:var(--amber-600); text-decoration:none;">política de privacidad</a> <span class="required">*</span></label>
                   </div>
-                  <p id="privacidad-error" class="text-red-500 mt-1"></p>
+                  <p id="privacidad-error" class="form-error"></p>
                 </div>
-                <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg hover:bg-amber-700 transition-colors flex items-center justify-center gap-2">
-                  <i data-lucide="send" class="w-5 h-5"></i>
+                <button type="submit" class="btn-submit" style="display:flex; align-items:center; justify-content:center; gap:.5rem;">
+                  <i data-lucide="send"></i>
                   <span>Enviar mensaje</span>
                 </button>
               </form>
+              </div>
             </div>
           </div>
         </div>
-        <section class="py-8">
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="mb-6">Encuéntranos</h2>
-            <div class="aspect-video bg-stone-200 rounded-lg overflow-hidden">
+        <section class="section" style="padding-top:0;">
+          <div class="form-card">
+            <h2 style="margin-bottom:1rem;">Encuéntranos</h2>
+            <div class="video-frame">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.6!2d-5.664!3d40.965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f262829e7454d%3A0x4b3c7c0f8c7e9a5e!2sPlaza%20Mayor%2C%20Salamanca!5e0!3m2!1ses!2ses!4v1234567890"
                 width="100%"
@@ -220,42 +205,42 @@
       </div>
     </main>
 
-    <footer class="bg-stone-800 text-stone-200 mt-16">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer-grid">
           <div>
-            <h3 class="text-amber-400 mb-4">Contacto</h3>
-            <div class="flex flex-col gap-3">
-              <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i><span>Plaza Mayor, Salamanca, España</span></div>
-              <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i><span>+34 923 123 456</span></div>
-              <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i><span>info@descubresalamanca.es</span></div>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Contacto</h3>
+            <div style="display:flex; flex-direction:column; gap:.5rem;">
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="map-pin"></i><span>Plaza Mayor, Salamanca, España</span></div>
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="phone"></i><span>+34 923 123 456</span></div>
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="mail"></i><span>info@descubresalamanca.es</span></div>
             </div>
           </div>
           <div>
-            <h3 class="text-amber-400 mb-4">Enlaces Rápidos</h3>
-            <div class="flex flex-col gap-2">
-              <a href="index.html" class="hover:text-amber-400 transition-colors">Inicio</a>
-              <a href="blog.html" class="hover:text-amber-400 transition-colors">Blog</a>
-              <a href="restaurantes.html" class="hover:text-amber-400 transition-colors">Restaurantes</a>
-              <a href="museos.html" class="hover:text-amber-400 transition-colors">Museos</a>
-              <a href="contacto.html" class="hover:text-amber-400 transition-colors">Contacto</a>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Enlaces Rápidos</h3>
+            <div style="display:flex; flex-direction:column; gap:.35rem;">
+              <a href="index.html">Inicio</a>
+              <a href="blog.html">Blog</a>
+              <a href="restaurantes.html">Restaurantes</a>
+              <a href="museos.html">Museos</a>
+              <a href="contacto.html">Contacto</a>
             </div>
           </div>
           <div>
-            <h3 class="text-amber-400 mb-4">Síguenos</h3>
-            <div class="flex gap-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener" class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Síguenos</h3>
+            <div class="social" style="display:flex; gap:.75rem;">
+              <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i data-lucide="twitter"></i></a>
             </div>
-            <p class="mt-4">Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.</p>
+            <p style="margin-top:1rem;">Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.</p>
           </div>
         </div>
-        <div class="border-t border-stone-700 mt-8 pt-6 text-center">
+        <div class="footer-bottom">
           <p>© 2025 Descubre Salamanca. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
-    <div id="toast-container" class="fixed top-4 right-4 z-[100]"></div>
+    <div id="toast-container"></div>
   </body>
   </html>

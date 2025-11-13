@@ -4,159 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Blog de Salamanca</title>
-    <link rel="stylesheet" href="./src/index.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
     <script defer src="https://unpkg.com/lucide@latest"></script>
     <script defer src="./assets/js/main.js"></script>
   </head>
-  <body data-page="blog" class="min-h-screen flex flex-col bg-white">
-    <header class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span class="text-amber-600">🏛️</span>
-          </div>
-          <div>
-            <h1>Descubre Salamanca</h1>
-            <p class="text-amber-100">Ciudad Dorada de España</p>
-          </div>
-        </a>
-        <nav class="desktop-nav gap-6 hidden md:flex" id="desktop-nav">
-          <a data-nav href="index.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Inicio</a>
-          <a data-nav href="blog.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Blog</a>
-          <a data-nav href="restaurantes.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Restaurantes</a>
-          <a data-nav href="museos.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Museos</a>
-          <a data-nav href="curiosidades.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Curiosidades</a>
-          <a data-nav href="contacto.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Contacto</a>
-          <a data-nav href="login.html" class="hover:text-amber-200 transition-colors border-b-2 border-transparent">Iniciar Sesión</a>
+  <body data-page="blog">
+    <header class="site-header">
+      <div class="container">
+        <div class="bar">
+          <a href="index.html" class="brand">
+            <div class="logo">🏛️</div>
+            <div>
+              <h1>Descubre Salamanca</h1>
+              <p>Ciudad Dorada de España</p>
+            </div>
+          </a>
+          <nav class="desktop-nav" id="desktop-nav">
+            <a data-nav href="index.html" class="border-b-2 border-transparent">Inicio</a>
+            <a data-nav href="blog.html" class="border-b-2 border-transparent">Blog</a>
+            <a data-nav href="restaurantes.html" class="border-b-2 border-transparent">Restaurantes</a>
+            <a data-nav href="museos.html" class="border-b-2 border-transparent">Museos</a>
+            <a data-nav href="curiosidades.html" class="border-b-2 border-transparent">Curiosidades</a>
+            <a data-nav href="contacto.html" class="border-b-2 border-transparent">Contacto</a>
+            <a data-nav href="login.html" class="border-b-2 border-transparent">Iniciar Sesión</a>
+          </nav>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu hidden" id="mobile-menu">
+          <a data-nav href="index.html">Inicio</a>
+          <a data-nav href="blog.html">Blog</a>
+          <a data-nav href="restaurantes.html">Restaurantes</a>
+          <a data-nav href="museos.html">Museos</a>
+          <a data-nav href="curiosidades.html">Curiosidades</a>
+          <a data-nav href="contacto.html">Contacto</a>
+          <a data-nav href="login.html">Iniciar Sesión</a>
         </nav>
-        <button
-          class="mobile-toggle md:hidden p-2 hover:bg-amber-700 rounded transition-colors"
-          id="mobile-toggle"
-          aria-label="Abrir menú"
-        >
-          <i data-lucide="menu"></i>
-        </button>
       </div>
-      <nav class="mobile-menu md:hidden mt-4 pb-4 flex-col gap-3 hidden" id="mobile-menu">
-        <a data-nav href="index.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Inicio</a>
-        <a data-nav href="blog.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Blog</a>
-        <a data-nav href="restaurantes.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Restaurantes</a>
-        <a data-nav href="museos.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Museos</a>
-        <a data-nav href="curiosidades.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Curiosidades</a>
-        <a data-nav href="contacto.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Contacto</a>
-        <a data-nav href="login.html" class="py-2 px-4 rounded hover:bg-amber-700 transition-colors">Iniciar Sesión</a>
-      </nav>
     </header>
 
-    <main class="flex-grow">
-      <div class="bg-amber-600 text-white py-16">
-        <div class="container mx-auto px-4">
-          <h1 class="mb-4">Blog de Salamanca</h1>
-          <p class="max-w-2xl">
-            Mantente al día con las últimas noticias, eventos y artículos sobre la vida cultural e histórica de Salamanca
-          </p>
+    <main>
+      <div class="hero-band">
+        <div class="container">
+          <h1>Blog de Salamanca</h1>
+          <p style="max-width:680px">Mantente al día con las últimas noticias, eventos y artículos sobre la vida cultural e histórica de Salamanca</p>
         </div>
       </div>
 
-      <div class="container mx-auto px-4">
-        <nav aria-label="Breadcrumb" class="py-4">
-          <ol class="flex items-center gap-2 flex-wrap">
-            <li>
-              <a href="index.html" class="flex items-center gap-1 text-stone-600 hover:text-amber-600 transition-colors">
-                <i data-lucide="home" class="w-4 h-4"></i>
-                <span>Inicio</span>
-              </a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i data-lucide="chevron-right" class="text-stone-400 w-4 h-4"></i>
-              <span class="text-stone-800">Blog</span>
-            </li>
-          </ol>
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumbs">
+          <a href="index.html"><i data-lucide="home"></i> <span>Inicio</span></a>
+          <span style="margin: 0 .5rem; color: var(--stone-400);">›</span>
+          <span>Blog</span>
         </nav>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8" id="posts-grid"></div>
+        <div class="cards-grid cols-2 cols-3" id="posts-grid"></div>
 
-        <div class="flex justify-center gap-2 py-8">
-          <button class="px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700 transition-colors">1</button>
-          <button class="px-4 py-2 bg-stone-200 text-stone-700 rounded hover:bg-stone-300 transition-colors">2</button>
-          <button class="px-4 py-2 bg-stone-200 text-stone-700 rounded hover:bg-stone-300 transition-colors">3</button>
+        <div class="pagination">
+          <button class="page is-active">1</button>
+          <button class="page">2</button>
+          <button class="page">3</button>
         </div>
       </div>
     </main>
 
-    <footer class="bg-stone-800 text-stone-200 mt-16">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer-grid">
           <div>
-            <h3 class="text-amber-400 mb-4">Contacto</h3>
-            <div class="flex flex-col gap-3">
-              <div class="flex items-center gap-2">
-                <i data-lucide="map-pin" class="w-4 h-4"></i>
-                <span>Plaza Mayor, Salamanca, España</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                <span>+34 923 123 456</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-                <span>info@descubresalamanca.es</span>
-              </div>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Contacto</h3>
+            <div style="display:flex; flex-direction:column; gap:.5rem;">
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="map-pin"></i><span>Plaza Mayor, Salamanca, España</span></div>
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="phone"></i><span>+34 923 123 456</span></div>
+              <div style="display:flex; align-items:center; gap:.5rem;"><i data-lucide="mail"></i><span>info@descubresalamanca.es</span></div>
             </div>
           </div>
           <div>
-            <h3 class="text-amber-400 mb-4">Enlaces Rápidos</h3>
-            <div class="flex flex-col gap-2">
-              <a href="index.html" class="hover:text-amber-400 transition-colors">Inicio</a>
-              <a href="blog.html" class="hover:text-amber-400 transition-colors">Blog</a>
-              <a href="restaurantes.html" class="hover:text-amber-400 transition-colors">Restaurantes</a>
-              <a href="museos.html" class="hover:text-amber-400 transition-colors">Museos</a>
-              <a href="contacto.html" class="hover:text-amber-400 transition-colors">Contacto</a>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Enlaces Rápidos</h3>
+            <div style="display:flex; flex-direction:column; gap:.35rem;">
+              <a href="index.html">Inicio</a>
+              <a href="blog.html">Blog</a>
+              <a href="restaurantes.html">Restaurantes</a>
+              <a href="museos.html">Museos</a>
+              <a href="contacto.html">Contacto</a>
             </div>
           </div>
           <div>
-            <h3 class="text-amber-400 mb-4">Síguenos</h3>
-            <div class="flex gap-4">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener"
-                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <i data-lucide="facebook" class="w-5 h-5"></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener"
-                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
-                aria-label="Instagram"
-              >
-                <i data-lucide="instagram" class="w-5 h-5"></i>
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener"
-                class="p-2 bg-stone-700 rounded-full hover:bg-amber-600 transition-colors"
-                aria-label="Twitter"
-              >
-                <i data-lucide="twitter" class="w-5 h-5"></i>
-              </a>
+            <h3 style="color: var(--amber-400); margin-bottom: .75rem;">Síguenos</h3>
+            <div class="social" style="display:flex; gap:.75rem;">
+              <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i data-lucide="twitter"></i></a>
             </div>
-            <p class="mt-4">
-              Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.
-            </p>
+            <p style="margin-top:1rem;">Descubre la magia de Salamanca, ciudad Patrimonio de la Humanidad. Te invitamos a explorar su rica historia, cultura y gastronomía.</p>
           </div>
         </div>
-        <div class="border-t border-stone-700 mt-8 pt-6 text-center">
+        <div class="footer-bottom">
           <p>© 2025 Descubre Salamanca. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
 
-    <div id="toast-container" class="fixed top-4 right-4 z-[100]"></div>
+    <div id="toast-container"></div>
 
     <script>
       /* Render posts (data inline to avoid framework) */
@@ -233,32 +183,32 @@
       if (grid) {
         posts.forEach((post) => {
           const art = document.createElement('article');
-          art.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow';
+          art.className = 'card card--hover';
           art.innerHTML = `
-            <div class='aspect-video overflow-hidden'>
-              <img src='${post.image}' alt='${post.title}' class='w-full h-full object-cover hover:scale-105 transition-transform duration-300'/>
+            <div class='card-media'>
+              <img src='${post.image}' alt='${post.title}'/>
             </div>
-            <div class='p-6'>
-              <div class='flex items-center gap-2 mb-3'>
-                <span class='px-3 py-1 bg-amber-100 text-amber-700 rounded-full'>${post.category}</span>
+            <div class='card-body'>
+              <div style='display:flex; align-items:center; gap:.5rem; margin-bottom:.5rem;'>
+                <span class='chip'>${post.category}</span>
               </div>
-              <h3 class='mb-3'>${post.title}</h3>
-              <p class='text-stone-600 mb-4'>${post.excerpt}</p>
-              <div class='flex items-center justify-between text-stone-500 border-t pt-4'>
-                <div class='flex items-center gap-4'>
-                  <div class='flex items-center gap-1'>
-                    <i data-lucide='user' class='w-4 h-4'></i>
+              <h3 style='margin-bottom:.5rem;'>${post.title}</h3>
+              <p class='muted' style='margin-bottom:1rem;'>${post.excerpt}</p>
+              <div style='display:flex; align-items:center; justify-content:space-between; color: var(--stone-600); border-top:1px solid var(--stone-200); padding-top: .75rem;'>
+                <div style='display:flex; align-items:center; gap:1rem;'>
+                  <div style='display:flex; align-items:center; gap:.35rem;'>
+                    <i data-lucide='user'></i>
                     <span>${post.author}</span>
                   </div>
-                  <div class='flex items-center gap-1'>
-                    <i data-lucide='calendar' class='w-4 h-4'></i>
+                  <div style='display:flex; align-items:center; gap:.35rem;'>
+                    <i data-lucide='calendar'></i>
                     <span>${post.date}</span>
                   </div>
                 </div>
               </div>
-              <button class='flex items-center gap-2 text-amber-600 mt-4 hover:gap-3 transition-all'>
+              <button class='btn btn-ghost' style='margin-top:.75rem;'>
                 <span>Leer más</span>
-                <i data-lucide='arrow-right' class='w-4 h-4'></i>
+                <i data-lucide='arrow-right'></i>
               </button>
             </div>
           `;
