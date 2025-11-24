@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Salamanca Esencial - El Arte de Vivir</title>
+    <link rel='icon' href='assets/images/icono.png' type='image/png'>
+    <link rel='stylesheet' href='assets/css/styles.css'>
+    <!-- Iconos Lucide -->
+    <script src='https://unpkg.com/lucide@latest'></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header id='navbar'>
+        <div class='header-container'>
+            <a href='index.html' class='logo'>
+                
+                <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Inicio</a></li>
+                    <li><a href='mapa.html'>Mapa</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Cultura</a></li>
+                    <li><a href='contacto.html'>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class='menu-toggle'>
+                <i data-lucide='menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class='hero'>
+        <div class='hero-content'>
+            <h1>Salamanca <br> <span class='text-gold' style='font-style: italic;'>Eterna</span></h1>
+            <p>Descubre la ciudad dorada donde la historia cobra vida. Un destino exclusivo para el viajero que busca cultura, gastronomía y belleza atemporal.</p>
+            <div style='display: flex; gap: 1rem; justify-content: center;'>
+                <a href='mapa.html' class='btn' style='background-color: var(--color-gold); border-color: var(--color-gold); color: var(--color-dark);'>Explorar Mapa</a>
+                <a href='#descubrir' class='btn btn-outline'>Ver Video</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Bar -->
+    <div class='quick-access-bar fade-in'>
+        <a href='restaurantes.html' class='qa-item'>
+            <i data-lucide='utensils'></i>
+            <span>Gastronomía</span>
+        </a>
+        <a href='museos.html' class='qa-item'>
+            <i data-lucide='landmark'></i>
+            <span>Cultura</span>
+        </a>
+        <a href='mapa.html' class='qa-item'>
+            <i data-lucide='map'></i>
+            <span>Mapa</span>
+        </a>
+        <a href='contacto.html' class='qa-item'>
+            <i data-lucide='mail'></i>
+            <span>Contacto</span>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main id='descubrir' class='container'>
+        <div style='text-align: center; margin-bottom: 4rem;'>
+            <span class='uppercase-tracking text-gold'>Bienvenidos a Salamanca</span>
+            <h2>Un Patrimonio de la Humanidad</h2>
+            <p style='max-width: 700px; margin: 0 auto;'>
+                Desde 1988, Salamanca es Patrimonio de la Humanidad por la UNESCO. 
+                Pasear por sus calles es recorrer siglos de historia, arte y conocimiento.
+            </p>
+        </div>
+
+        <div class='grid-3'>
+            <!-- Card 1 -->
+            <article class='card'>
+                <div class='card-image-container'>
+                    <img src='https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' alt='Universidad'>
+                    <div class='card-price'>Siglo XIII</div>
+                </div>
+                <div class='card-content'>
+                    <h3>La Universidad</h3>
+                    <p>La más antigua de España. Busca la rana en su fachada plateresca y descubre la biblioteca histórica.</p>
+                    <a href='curiosidades.html' class='btn' style='width: 100%; text-align: center;'>Descubrir Secreto</a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class='card'>
+                <div class='card-image-container'>
+                    <img src='https://images.unsplash.com/photo-1599661046289-e31897846e41?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' alt='Catedrales'>
+                    <div class='card-price'>Gótico & Barroco</div>
+                </div>
+                <div class='card-content'>
+                    <h3>Las Catedrales</h3>
+                    <p>Un conjunto monumental único. Sube a las torres medievales del Ieronimus para vistas inigualables.</p>
+                    <a href='museos.html' class='btn' style='width: 100%; text-align: center;'>Ver Horarios</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class='card'>
+                <div class='card-image-container'>
+                    <img src='https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' alt='Plaza Mayor'>
+                    <div class='card-price'>Barroco</div>
+                </div>
+                <div class='card-content'>
+                    <h3>Plaza Mayor</h3>
+                    <p>El corazón de la ciudad. Considerada una de las plazas más bellas de Europa, ideal para tapear.</p>
+                    <a href='restaurantes.html' class='btn' style='width: 100%; text-align: center;'>Dónde Comer</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class='footer-grid'>
+            <div class='footer-col'>
+                <div class='logo' style='margin-bottom: 1rem;'>
+                    
+                    <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+                </div>
+                <p>Guía oficial de turismo esencial. Descubre la ciudad dorada con nosotros.</p>
+            </div>
+            <div class='footer-col'>
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href='mapa.html'>Mapa Interactivo</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Museos</a></li>
+                    <li><a href='blog.html'>Agenda</a></li>
+                </ul>
+            </div>
+            <div class='footer-col'>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-lucide='map-pin' style='display: inline; width: 16px;'></i> Plaza Mayor, 1</li>
+                    <li><i data-lucide='mail' style='display: inline; width: 16px;'></i> info@salamanca.es</li>
+                    <li><i data-lucide='phone' style='display: inline; width: 16px;'></i> +34 923 123 456</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src='assets/js/main.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+

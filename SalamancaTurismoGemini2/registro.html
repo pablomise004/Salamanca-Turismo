@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Registro - Salamanca Esencial</title>
+    <link rel='icon' href='assets/images/icono.png' type='image/png'>
+    <link rel='stylesheet' href='assets/css/styles.css'>
+    <script src='https://unpkg.com/lucide@latest'></script>
+    <style>
+        .auth-form {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-gold);
+            font-family: var(--font-serif);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-text);
+            font-family: var(--font-sans);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+        .auth-links {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .auth-links a {
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+        .auth-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header id='navbar'>
+        <div class='header-container'>
+            <a href='index.html' class='logo'>
+                
+                <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Inicio</a></li>
+                    <li><a href='mapa.html'>Mapa</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Cultura</a></li>
+                    <li><a href='contacto.html'>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class='menu-toggle'>
+                <i data-lucide='menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <main class='container'>
+        <div style='text-align: center; margin-bottom: 3rem;'>
+            <span class='uppercase-tracking text-gold'>Comunidad</span>
+            <h2>Crear Cuenta</h2>
+            <p style='max-width: 700px; margin: 0 auto;'>
+                Regístrate para guardar tus lugares favoritos y recibir novedades exclusivas.
+            </p>
+        </div>
+
+        <div class='auth-form'>
+            <form>
+                <div class='form-group'>
+                    <label for='username'>Nombre de Usuario</label>
+                    <input type='text' id='username' name='username' required>
+                </div>
+                <div class='form-group'>
+                    <label for='email'>Email</label>
+                    <input type='email' id='email' name='email' required>
+                </div>
+                <div class='form-group'>
+                    <label for='password'>Contraseña</label>
+                    <input type='password' id='password' name='password' required>
+                </div>
+                <div class='form-group'>
+                    <label for='confirm-password'>Confirmar Contraseña</label>
+                    <input type='password' id='confirm-password' name='confirm-password' required>
+                </div>
+                <button type='submit' class='btn' style='width: 100%;'>Registrarse</button>
+            </form>
+            <div class='auth-links'>
+                <p>¿Ya tienes cuenta? <a href='#'>Iniciar Sesión</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class='footer-grid'>
+            <div class='footer-col'>
+                <div class='logo' style='margin-bottom: 1rem;'>
+                    
+                    <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+                </div>
+                <p>Guía oficial de turismo esencial.</p>
+            </div>
+            <div class='footer-col'>
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href='mapa.html'>Mapa Interactivo</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Museos</a></li>
+                </ul>
+            </div>
+            <div class='footer-col'>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-lucide='map-pin' style='display: inline; width: 16px;'></i> Plaza Mayor, 1</li>
+                    <li><i data-lucide='mail' style='display: inline; width: 16px;'></i> info@salamanca.es</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src='assets/js/main.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+

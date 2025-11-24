@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Mapa - Salamanca Esencial</title>
+    <link rel='icon' href='assets/images/icono.png' type='image/png'>
+    <link rel='stylesheet' href='assets/css/styles.css'>
+    <script src='https://unpkg.com/lucide@latest'></script>
+    <style>
+        .map-container {
+            width: 100%;
+            height: 600px;
+            background: #222;
+            border: 1px solid var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            position: relative;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header id='navbar'>
+        <div class='header-container'>
+            <a href='index.html' class='logo'>
+                
+                <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Inicio</a></li>
+                    <li><a href='mapa.html' class='active'>Mapa</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Cultura</a></li>
+                    <li><a href='contacto.html'>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class='menu-toggle'>
+                <i data-lucide='menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <main class='container'>
+        <div style='text-align: center; margin-bottom: 3rem;'>
+            <span class='uppercase-tracking text-gold'>Ubicación</span>
+            <h2>Explora la Ciudad</h2>
+            <p style='max-width: 700px; margin: 0 auto;'>
+                Navega por las calles de Salamanca y encuentra los puntos de interés más importantes.
+            </p>
+        </div>
+
+        <div class='map-container'>
+            <!-- Placeholder for Google Maps or similar -->
+            <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.668767897763!2d-5.666160684587266!3d40.96736897930494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3f263c7b090001%3A0x8040263733333333!2sPlaza%20Mayor%2C%20Salamanca!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses' allowfullscreen='' loading='lazy'></iframe>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class='footer-grid'>
+            <div class='footer-col'>
+                <div class='logo' style='margin-bottom: 1rem;'>
+                    
+                    <img src='assets/images/icono.png' alt='Logo' width='45' height='30'> <span>SALAMANCA</span>
+                </div>
+                <p>Guía oficial de turismo esencial.</p>
+            </div>
+            <div class='footer-col'>
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href='mapa.html'>Mapa Interactivo</a></li>
+                    <li><a href='restaurantes.html'>Gastronomía</a></li>
+                    <li><a href='museos.html'>Museos</a></li>
+                </ul>
+            </div>
+            <div class='footer-col'>
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i data-lucide='map-pin' style='display: inline; width: 16px;'></i> Plaza Mayor, 1</li>
+                    <li><i data-lucide='mail' style='display: inline; width: 16px;'></i> info@salamanca.es</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src='assets/js/main.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+
